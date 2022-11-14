@@ -45,6 +45,9 @@ const players = {
         "rank11":{
     "first":"David","last":"Goffin","points":2335}
 }
+
+app.use(express.static(path.join(__dirname, "js")));
+
 app.get('/', (request, response)=>{
     response.sendFile(__dirname + '/index.html');
 })
